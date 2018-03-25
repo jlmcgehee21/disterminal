@@ -1,0 +1,6 @@
+flake8
+coverage
+pytest
+pytest-watch
+
+-r requirements.txt

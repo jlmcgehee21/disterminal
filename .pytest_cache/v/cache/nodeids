@@ -1,0 +1,8 @@
+[
+  "tests/test_cli.py::test_cli_no_args",
+  "tests/test_cli.py::test_cli_help",
+  "tests/test_cli.py::test_bad_distribution",
+  "tests/test_cli.py::test_bad_function",
+  "tests/test_cli.py::test_all_nan",
+  "tests/test_helpers.py::test_autorange"
+]

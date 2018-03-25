@@ -1,0 +1,7 @@
+{
+  "tests/test_disterminal.py::test_command_line_interface": true,
+  "tests/test_helpers.py::test_bad_distribution": true,
+  "tests/test_helpers.py::test_bad_function": true,
+  "tests/test_helpers.py::test_cli_help": true,
+  "tests/test_helpers.py::test_cli_no_args": true
+}
