@@ -6,6 +6,8 @@ deploy:
     secure: uvx94RtcMo9F5kJt0+3f6Y2OLjnAaJRV1dnqZmDJSvb/rNmX9amK0amKxLML/FBEHdBgCbjuJQo3LCtyIifHKvSqfHioZHUuxpPnQzWg5xuHQp8g64sSJRg2WCunaZDoIldfyUBpvkgUy5neEIcFJ/C/6yf1eu5WoOBJu1srvd/nXTRZaz/ygzA5VcAMK/TB3uDFIudmsV6LVJ0Ixa/0NWWwpi6JLPdaBT81qPjq+/QkvW93V1cx9YYIwu7VuQBkr/CCxQ4rFaEXeMcHgUi+DVj0OZxZ/Unn4lsl1PuIJzBU/lf1kXqjonk/jTcoIHSJ27bfiD0y8dv1uEHH1YZ7nKqZ8pLuC1k9IknFeyaRQxyz31vSjRdTK9JXZcj1bv0r76BuvyzyfhR8xowzH2lS/W4sDdJl300VvI9oRq9uchVcBvh7WU2sPNZP2uSyKZWXS7Zx6wtYhOOQd4SF3bDitDNEYxcLCwmVVhvDUsFsWVfFvgb0M3D4KG8dp7TwfvAv5Paoz2p+EbnSfYnC23TuOr+g0KN56zeLbD30/V3g6hl804vjoMdBgNJBoqujVS5KbcNJ3ywjcVIK1CiEkNTOKkmfYfwLlhgxt+BHfSazNAIu6FZtRC+yyi5SyLno5QJDU6LEWNOpcqdx9tR5S2kAIR2mgK4nyVw5JY2ncqavlMU=
   on:
     branch: master
+    python: '3.6'
+
 install: pip install -r dev_requirements.txt
 language: python
 python:
