@@ -8,6 +8,7 @@ class Disterminal < Formula
 
   depends_on "python"
   depends_on "gnuplot"
+  depends_on "gcc"
 
   resource "numpy" do
     url "https://files.pythonhosted.org/packages/0b/66/86185402ee2d55865c675c06a5cfef742e39f4635a4ce1b1aefd20711c13/numpy-1.14.2.zip"

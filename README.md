@@ -12,8 +12,17 @@ quickly plots the distribution you specify.
 If you want to fit distributions to data or do fancier things in your terminal
 check out [visidata](https://github.com/saulpw/visidata).
 
+![image](./img/palette.png)
+
 # Installation
-`$ pip install disterminal` -- also ensure `gnuplot` is in your path.
+
+With `pip`:
+* `$ pip install disterminal` -- also ensure `gnuplot` is in your path.
+
+
+Or with brew:
+* `$ brew tap jlmcgehee21/disterminal https://github.com/jlmcgehee21/disterminal`
+* `$ brew install disterminal`
 
 # Usage Instructions
 `$ disterminal -h`
