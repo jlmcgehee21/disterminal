@@ -8,7 +8,7 @@ from setuptools import setup, find_packages
 with open('README.md') as readme_file:
     readme = readme_file.read()
 
-requirements = ['Click>=6.0', 'scipy==1.0.0']
+requirements = ['Click>=6.0', 'scipy==1.0.0', 'fabulous==0.3.0']
 
 setup_requirements = ['pytest-runner', ]
 
@@ -46,6 +46,6 @@ setup(
     test_suite='tests',
     tests_require=test_requirements,
     url='https://github.com/jlmcgehee21/disterminal',
-    version='0.1.4',
+    version='0.2.0',
     zip_safe=False,
 )

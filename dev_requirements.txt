@@ -1,6 +1,8 @@
 flake8
+yapf
 coverage
 pytest
 pytest-watch
+homebrew-pypi-poet
 
 -r requirements.txt

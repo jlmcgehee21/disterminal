@@ -8,8 +8,6 @@ import platform
 import subprocess
 
 
-
-
 def get_terminal_size():
     """ getTerminalSize()
      - get width and height of console
@@ -27,7 +25,7 @@ def get_terminal_size():
     if current_os in ['Linux', 'Darwin'] or current_os.startswith('CYGWIN'):
         tuple_xy = _get_terminal_size_linux()
     if tuple_xy is None:
-        tuple_xy = (80, 25)      # default value
+        tuple_xy = (80, 25)  # default value
 
     return tuple_xy
 
@@ -42,9 +40,8 @@ def _get_terminal_size_windows():
         csbi = create_string_buffer(22)
         res = windll.kernel32.GetConsoleScreenBufferInfo(h, csbi)
         if res:
-            (bufx, bufy, curx, cury, wattr,
-             left, top, right, bottom,
-             maxx, maxy) = struct.unpack("hhhhHhhhhhh", csbi.raw)
+            (bufx, bufy, curx, cury, wattr, left, top, right, bottom, maxx,
+             maxy) = struct.unpack("hhhhHhhhhhh", csbi.raw)
             sizex = right - left + 1
             sizey = bottom - top + 1
             return sizex, sizey
@@ -68,11 +65,12 @@ def _get_terminal_size_linux():
         try:
             import fcntl
             import termios
-            cr = struct.unpack('hh',
-                               fcntl.ioctl(fd, termios.TIOCGWINSZ, '1234'))
+            cr = struct.unpack('hh', fcntl.ioctl(fd, termios.TIOCGWINSZ,
+                                                 '1234'))
             return cr
         except:
             pass
+
     cr = ioctl_GWINSZ(0) or ioctl_GWINSZ(1) or ioctl_GWINSZ(2)
     if not cr:
         try:
@@ -87,6 +85,7 @@ def _get_terminal_size_linux():
         except:
             return None
     return int(cr[1]), int(cr[0])
+
 
 if __name__ == "__main__":
     sizex, sizey = get_terminal_size()

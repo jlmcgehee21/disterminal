@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-
 """Console script for disterminal."""
 import numpy as np
 import sys
@@ -9,13 +8,16 @@ from . import messages
 from . import helpers
 
 
-@click.command(epilog=messages.EPILOG, help=messages.HELP_TEXT,
-               context_settings=messages.CONTEXT_SETTINGS)
+@click.command(
+    epilog=messages.EPILOG,
+    help=messages.HELP_TEXT,
+    context_settings=messages.CONTEXT_SETTINGS)
 @click.argument('distribution')
 @click.argument('function')
 @click.argument('func_args', nargs=-1, type=float)
 @click.option('--xlim', nargs=2, default=(None, None), type=float)
-def main(distribution, function, func_args, xlim):
+@click.option('--color', default='blue', type=str)
+def main(distribution, function, func_args, xlim, color):
 
     dist = helpers.get_dist_callable(distribution)
 
@@ -34,10 +36,9 @@ def main(distribution, function, func_args, xlim):
 
     y = main_call(x)
 
-    plot(x, y, distribution, function)
+    plot(x, y, distribution, function, color)
 
     return 0
-
 
 
 if __name__ == "__main__":
