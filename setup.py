@@ -8,7 +8,7 @@ from setuptools import setup, find_packages
 with open('README.md') as readme_file:
     readme = readme_file.read()
 
-requirements = ['Click>=6.0', 'scipy==1.0.0', 'fabulous==0.3.0']
+requirements = ['Click>=6.0', 'scipy==1.10.0', 'fabulous==0.3.0']
 
 setup_requirements = ['pytest-runner', ]
 
